@@ -1,0 +1,30 @@
+import time
+import os
+
+letters = {
+    'L': ["*    ","*    ","*    ","*    ","*****"],
+    'O': [" *** ","*   *","*   *","*   *"," *** "],
+    'V': ["*   *","*   *","*   *"," * * ","  *  "],
+    'E': ["*****","*    ","**** ","*    ","*****"],
+    'Y': ["*   *","*   *"," *** ","  *  ","  *  "],
+    'U': ["*   *","*   *","*   *","*   *"," *** "],
+    ' ': ["     ","     ","     ","     ","     "]
+}
+
+word = "LOVE YOU"
+
+for _ in range(3):
+    os.system('cls' if os.name == 'nt' else 'clear')
+    for row in range(5):
+        line = ""
+        for char in word:
+            line += letters[char][row] + "  "
+        print(line)
+        time.sleep(0.2)
+    time.sleep(1)
+
+print()
+for char in "I love you. Will you be mine?":
+    print(char, end="", flush=True)
+    time.sleep(0.08)
+print()
